@@ -1,0 +1,172 @@
+@media screen and (max-width: 720px) {
+    html {
+        font-size: 10px;
+        line-height: 1.2;
+    }
+    .container {
+        width: 90%;
+        max-width: 90vw;
+        padding: 20px 5%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    
+    .t-contents{
+        /*width: 100%;*/
+        margin-right: 0;
+        margin-left: 0;
+
+    }
+    a {
+        text-decoration: none;
+    }
+    a.button {
+        /*margin-left: auto;*/
+        /*margin-right: auto;*/
+        margin: 10px 0 20px;
+    }
+    .news-list.top{
+        padding-bottom:95px;
+        margin: 10px 0 10px;
+    }
+    a.list-page-button {
+        line-height: 0px;
+        /*margin-left: auto;*/
+        /*margin-right: auto;*/
+        margin: 10px 2px;
+        max-height: 20px;
+        border: 1px solid #d4d4d4;
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+        text-decoration: none;
+        display: inline-block;
+        text-align: center;
+    }
+    a.list-page-button p {
+        font-size: 0.8rem;
+    }
+    a.list-page-button-dummy {
+        line-height: 0px;
+        /*margin-left: auto;*/
+        /*margin-right: auto;*/
+        margin: 10px 2px;
+        max-height: 20px;
+        border: 1px solid #d4d4d4;
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+        text-decoration: none;
+        display: inline-block;
+        text-align: center;
+    }
+    a.list-page-button-dummy p {
+        font-size: 0.8rem;
+    }
+    a.news-menu {
+        margin: 2px 0;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left:0px;
+        height: 30px;
+        width: 97%;
+    }
+    a.news-menu p{
+        margin-left:50px;
+    }
+
+
+
+    .box{
+        margin: 10px 0 5px;
+    }
+    
+    a.contents-button {
+        /*margin-left: auto;*/
+        /*margin-right: auto;*/
+        margin: 5px;
+        /*text-align: center;*/
+        display: block;
+        position: relative;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 15px;
+        width: 92%;
+        height: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        overflow: hidden;
+        
+    }
+
+
+    a.contact-button {
+        /*margin-left: auto;*/
+        /*margin-right: auto;*/
+        margin: 5px;
+        /*text-align: center;*/
+        display: block;
+        position: relative;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 15px;
+        width: 92%;
+        height: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        overflow: hidden;
+        
+    }
+
+
+    .works-list {
+        width: 95%;
+    }
+
+
+    a.button {
+        /*margin-left: auto;*/
+        /*margin-right: auto;*/
+        margin: 10px 0;
+        text-align: center;
+        color: #d4d4d4;
+        position: relative;
+        padding: 8px 45px;
+        /*width: 200px;*/
+        border: 1px solid #d4d4d4;
+        display: inline-block;
+        font-size: 1.1rem;
+        font-weight: 900;
+        transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    }
+
+
+    .youtube {
+        position: relative;
+        /*width: 100%;
+        padding-top: 56.25%;*/
+        width: 95%;
+        padding-top: 53.4375%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .top {
+        overflow-x: hidden;
+        overflow-y: hidden;
+        height: 130px !important;
+    }
+
+
+
+
+    td:first-child {
+        width:46%;
+    }
+
+
+    
+    ::-webkit-scrollbar{
+        width: 0px;
+        height: 0px;
+      }
+}

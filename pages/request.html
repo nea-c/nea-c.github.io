@@ -1,0 +1,11 @@
+---
+layout: page
+title: Request
+permalink: /request/
+---
+{% for elem in site.requests %}
+<a class="contents-button" href="{{ elem.url | relative_url }}">
+    <p class="contents-date"><time>{{ elem.date | date: '%Y-%m-%d' }}</time></p>
+    <p class="contents-title">{{ elem.title }}</p>
+</a>
+{% endfor %}

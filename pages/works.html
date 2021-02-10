@@ -1,0 +1,57 @@
+---
+layout: page
+title: Works
+permalink: /works/
+---
+
+<div id="page-works" style="text-align:center;"></div>
+
+<div id="page-works-buttons" class="list-buttons inline-center">
+    {% assign items = site.works | sort: 'some_field' | reverse %}
+    {% for elem in items limit:6 %}
+    <span class="works-list">
+        <p class="contents-date">{{elem.work_category}} - {{ elem.date | date: '%Y-%m-%d' }}</p>
+        <p class="contents-title">{{ elem.title }}</p>
+        <div class="inline-center youtube box2">
+            <iframe width="640" height="360" src="https://www.youtube.com/embed/{{ elem.youtube_video_id }}"
+                frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+    </span>
+
+    {% endfor %}
+</div>
+
+{% assign items = site.works | sort: 'some_field' | reverse %}
+{% assign total = 0 %}
+{% for elem in items %}
+    {{elem.date }}
+    {% assign total = total | plus: 1 %}
+{% endfor %}
+
+<div>{{% total = total | division:6 %}}</div>
+
+<div id="page-works-buttons" class="list-buttons inline-center">
+<!-- if (list_page > 3) -->
+<a class="list-page-button" href="{{ '/works' | relative_url }}"><p class="news-title">≪</p></a>
+<!-- if (list_page > 1) -->
+<a class="list-page-button" href="' + def_link_text + Math.max(1, list_page - 1) + '"><p class="news-title">&lt;</p></a>
+<!-- if (list_page > 3 && button_c > 5) -->
+<a class="list-page-button-dummy"><p class="news-title">...</p></a>
+<!-- for (var i = 1; i < 5 + 1; i++) {
+   j = i + lstart;
+   active_text = "";
+   link_text = def_link_text;
+   link_param = j;
+   if (j == list_page) {
+      active_text = "active";
+      link_text = '"';
+      link_param = "";
+   }
+   if (j <= button_c) element.insertAdjacentHTML('beforeend', '<a class="list-page-button ' + active_text + link_text + link_param + '"><p class="news-title">' + j + '</p></a>');
+}
+if (list_page < button_c - 2 && button_c > 5) element.insertAdjacentHTML('beforeend', '<a class="list-page-button-dummy"><p class="news-title">...</p></a>');
+if (list_page < button_c) element.insertAdjacentHTML('beforeend', '<a class="list-page-button' + link_text + Math.min(button_c, list_page + 1) + '"><p class="news-title">></p></a>');
+if (list_page < button_c - 2) element.insertAdjacentHTML('beforeend', '<a class="list-page-button' + link_text + button_c + '"><p class="news-title">≫</p></a>');
+-->
+</div>

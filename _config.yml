@@ -1,0 +1,58 @@
+title: NeA Works
+description: >
+   A
+
+
+baseurl: ""
+url: "http://a.neac.work"
+
+author:
+  name: NeA
+  email: nea_works@outlook.jp
+  github: nea-c
+  twitter: NeAc_
+
+paginate: 6
+paginate_path: "page:num"
+
+sass:
+  style: expanded
+
+gems:
+  - jekyll-paginate
+  - jekyll-feed
+
+
+
+collections:
+  works:
+    output: true
+  requests:
+    output: true
+
+collections_dir: pages
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      permalink: /news/:year-:month-:day-:title/
+  -
+    scope:
+      path: ""
+      type: "works"
+    values:
+      layout: "post"
+      permalink: /works/:year-:month-:day-:title/
+  -
+    scope:
+      path: ""
+      type: "requests"
+    values:
+      layout: "post"
+      permalink: /request/:title/
+
+

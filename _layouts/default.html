@@ -1,1 +1,109 @@
-{{ content }}
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+
+
+  <link href="{{ '/assets/css/reset.css' | relative_url }}" rel="stylesheet" type="text/css">
+  <link href="{{ '/assets/css/navbar.css' | relative_url }}" rel="stylesheet" type="text/css">
+  <link href="{{ '/assets/css/footer.css' | relative_url }}" rel="stylesheet" type="text/css">
+  <link href="{{ '/assets/css/style.css' | relative_url }}" rel="stylesheet" type="text/css">
+  <link href="{{ '/assets/css/style_m.css' | relative_url }}" rel="stylesheet" type="text/css"
+    media="(max-width: 720px)" />
+  <link href="{{ '/assets/fontawesome/css/all.min.css' | relative_url }}" rel="stylesheet" type="text/css">
+
+
+  <script data-ad-client="ca-pub-7964887280180328" async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="{{ '/assets/img/page_icon.ico' | relative_url }}">
+
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ja_JP">
+
+
+  <meta name="twitter:card" content="summary_large_image">
+
+
+  <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <meta name="description"
+    content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
+</head>
+
+<body>
+
+  <!-- サイト名とナビゲーション部分｡全ページ共通 -->
+
+  <div id="wrapper">
+    <header id="menu" class="menu-fixed">
+      <input type="checkbox" class="menu-checkbox" id="menu-checkbox" />
+      <div class="menu menu-right menu-color">
+        <ul class="menu-navigation">
+          <li class="menu-header">
+            <a href="{{ '/' | relative_url }}" class="menu-brand">NeA Works</a>
+            <label class="menu-hamburger menu-hamburger-doublespin" id="menu-hamburger" for="menu-checkbox">
+              <span></span> </label>
+          </li>
+          <li class="menu-item"><a href="{{ '/works/' | relative_url }}">Works</a></li>
+          <li class="menu-item"><a href="{{ '/request/' | relative_url }}">Request</a></li>
+          <li class="menu-item"><a href="{{ '/contact/' | relative_url }}">Contact</a></li>
+        </ul>
+      </div>
+    </header>
+    <div class="contents">
+      <div class="container-full top">
+        <div class="top-bg">
+          <video id="background_movie" class="center-video"
+            src="{{ '/assets/mov/background/default.mp4' | relative_url }}" width="100%" autoplay playsinline muted
+            loop></video>
+        </div>
+        <div class="title-container">
+          <div class="title text-shadow">
+            <h1>
+              {% if page.title %}{{ page.title }}{% endif %}
+            </h1>
+            <h6>
+
+            </h6>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="t-contents">
+          {{ content }}
+        </div>
+      </div>
+    </div>
+
+    <!-- フッター｡全ページ共通 >
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__container">
+          <p class="copyright"><small>&copy; 2021 {{ site.author.name }}</small></p>
+
+          <div class="social-link">
+            {% if site.author.github %}
+            <p class="social-link__item">
+              <a href="https://github.com/{{ site.author.github }}"><i class="fa fa-github"></i></a>
+            </p>
+            {% endif %}
+            {% if site.author.twitter %}
+            <p class="social-link__item">
+              <a href="https://twitter.com/{{ site.author.twitter }}"><i class="fa fa-twitter"></i></a>
+            </p>
+            {% endif %}
+          </div>
+        </div>
+        footer__container-->
+      </div>
+      <!--container-->
+    </footer>
+  </div>
+</body>
+
+</html>

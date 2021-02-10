@@ -39,20 +39,20 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-      permalink: /news/:year-:month-:day-:title
+      permalink: /news/:year-:month-:day-:title/
   -
     scope:
       path: ""
       type: "works"
     values:
       layout: "post"
-      permalink: /works/:year-:month-:day-:title
+      permalink: /works/:year-:month-:day-:title/
   -
     scope:
       path: ""
       type: "requests"
     values:
       layout: "post"
-      permalink: /request/:title
+      permalink: /request/:title/
 
 

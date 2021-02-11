@@ -77,6 +77,8 @@ sub_title: MultiCreator
 
 依頼について、料金や注意事項に関する内容を記載しています。
 
+<div class="box"></div>
+
 {% for elem in site.requests %}
 <a class="contents-button" href="{{ elem.url | relative_url }}">
     <p class="contents-date"><time>{{ elem.date | date: '%Y-%m-%d' }}</time></p>
@@ -100,7 +102,12 @@ sub_title: MultiCreator
 
 <div class="box"></div>
 {% assign items = site.works | sort: 'some_field' | reverse %}
-{% for elem in items limit:2 %}
+{% assign worksL = 0 %}
+{% for elem in items %}
+{% if elem.youtube_video_id %}
+{% if worksL >= 2 %}
+{% else %}
+{% assign worksL = worksL | plus:1 %}
 <span class="works-list">
     <p class="contents-date">{{ elem.work_category }} - {{ elem.date | date: '%Y-%m-%d' }}</p>
     <p class="contents-title">{{ elem.title }}</p>
@@ -108,6 +115,8 @@ sub_title: MultiCreator
         <iframe width="640" height="360" src="https://www.youtube.com/embed/{{ elem.youtube_video_id }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
 </span>
+{% endif %}
+{% endif %}
 {% endfor %}
 
 <div class="inline-center"><a class="button" href="{{ '/works' | relative_url }}" target="">もっと見る</a></div>

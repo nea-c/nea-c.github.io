@@ -239,6 +239,36 @@
         font-size: 1rem;
         color: #7e7e7e;
     }
+    .contact-page a.contents-button{
+        font-size: 3rem;
+    }
+    a.contents-button .name {
+        line-height: 0;
+    }
+    a.contents-button.twitter {
+        color : #d4d4d4;
+    }
+    
+    a.contents-button.twitter:hover {
+        color : #12b0d8;
+    }
+
+    a.contents-button.discord {
+        color : #d4d4d4;
+    }
+    a.contents-button.discord:hover {
+        color : #4a648f;
+    }
+    
+    a.contents-button.mail {
+        color : #d4d4d4;
+    }
+    a.contents-button.mail:hover {
+        color : #1ea562;
+    }
+
+
+
     a.list-page-button {
         line-height: 0px;
         /*margin-left: auto;*/
@@ -334,77 +364,73 @@
     }
 
 
-
-
-
-
-    .contact-button {
+    a.works-button {
         /*margin-left: auto;*/
         /*margin-right: auto;*/
-        margin: 10px;
+        margin: 0px;
         /*text-align: center;*/
         color: #d4d4d4;
-        display: block;
-        position: relative;
         padding-top: 20px;
-        padding-bottom: 50px;
-        padding-left:30px;
-        width: 95%;
-        height: 50px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100% !important;
+        height: 100% !important;
+        max-height: 360px;
         margin-left: auto;
         margin-right: auto;
         border: 1px solid #d4d4d4;
         overflow: hidden;
-        font-size: 3rem;
         
     }
-    .contact-button .name {
-        line-height: 0;
-    }
-    .contact-button::before {
+    a.works-button::before {
         position: absolute;
         top: 0;
         left: 0;
         z-index: -1;
         content: '';
-        width: 115%;
+        width: 150%;
         height: 100%;
         background: #d4d4d4;
         transform-origin: right top;
         transform: skewX(-30deg) scale(0, 1);
         transition: transform .7s cubic-bezier(0.075, 0.82, 0.165, 1);
       }
-    .contact-button:hover::before {
+    a.works-button:hover::before {
         transform-origin: left top;
         transform: skewX(-30deg) scale(1, 1);
       }
-    .contact-button.twitter {
-        color : #d4d4d4;
+    a.works-button:hover {
+        color: #212121;
+        /*background-color: transparent;
         border: 1px solid #d4d4d4;
+        background: #d4d4d4;*/
     }
-    
-    .contact-button.twitter:hover {
-        color : #12b0d8;
+    a.works-button .contents-title {
+        text-align: center;
+        line-height: 0;
+        margin-top: 25%;
+        font-weight: 900;
+        font-size: 1.2rem;
     }
-
-    .contact-button.discord {
-        color : #d4d4d4;
-        border: 1px solid #d4d4d4;
+    a.works-button .contents-date {
+        text-align: left;
+        font-size: 1rem;
+        color: #5099a5;
+        font-weight: bold;
     }
-    .contact-button.discord:hover {
-        color : #4a648f;
+    a.works-button:hover .contents-date {
+        text-align: left;
+        font-size: 1rem;
+        color: #415659;
+        font-weight: bold;
     }
-    
-    .contact-button.mail {
-        color : #d4d4d4;
-        border: 1px solid #d4d4d4;
+    a.works-button .contents-sub-title {
+        text-align: left;
+        font-weight: 900;
+        font-size: 1rem;
+        color: #7e7e7e;
     }
-    .contact-button.mail:hover {
-        color : #1ea562;
-    }
-
-
-
 
     
     video {

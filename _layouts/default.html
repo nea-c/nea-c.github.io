@@ -13,9 +13,7 @@
     media="(max-width: 720px)" />
   <link href="{{ '/assets/fontawesome/css/all.min.css' | relative_url }}" rel="stylesheet" type="text/css">
 
-
-  <script data-ad-client="ca-pub-7964887280180328" async
-    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <!--script src="{{ '/assets/js/change.js' | relative_url }}" type="text/javascript"></script-->
 
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -68,7 +66,7 @@
               {% if page.title %}{{ page.title }}{% endif %}
             </h1>
             <h6>
-
+              {% if page.sub_title %}{{ page.sub_title }}{% endif %}
             </h6>
           </div>
         </div>
@@ -80,27 +78,9 @@
       </div>
     </div>
 
-    <!-- フッター｡全ページ共通 >
-    <footer class="footer">
-      <div class="container">
-        <div class="footer__container">
-          <p class="copyright"><small>&copy; 2021 {{ site.author.name }}</small></p>
-
-          <div class="social-link">
-            {% if site.author.github %}
-            <p class="social-link__item">
-              <a href="https://github.com/{{ site.author.github }}"><i class="fa fa-github"></i></a>
-            </p>
-            {% endif %}
-            {% if site.author.twitter %}
-            <p class="social-link__item">
-              <a href="https://twitter.com/{{ site.author.twitter }}"><i class="fa fa-twitter"></i></a>
-            </p>
-            {% endif %}
-          </div>
-        </div>
-        footer__container-->
-      </div>
+    <!-- フッター｡全ページ共通 -->
+    <footer>
+      Copyright &copy; {{ site.author.name }} All Rights Reserved
       <!--container-->
     </footer>
   </div>

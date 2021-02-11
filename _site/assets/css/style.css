@@ -230,7 +230,8 @@
     a.contents-button .contents-date {
         text-align: left;
         font-size: 1rem;
-        color: #406268;
+        color: #5099a5;
+        font-weight: bold;
     }
     a.contents-button .contents-sub-title {
         text-align: left;
@@ -355,6 +356,9 @@
         overflow: hidden;
         font-size: 3rem;
         
+    }
+    .contact-button .name {
+        line-height: 0;
     }
     .contact-button::before {
         position: absolute;

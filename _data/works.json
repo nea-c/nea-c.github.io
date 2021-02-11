@@ -1,0 +1,18 @@
+---
+layout: null
+---
+{
+  {% raw >}}
+  {% for elem in site.works >}}
+
+    "{{ elem.url | slugify }}": {
+      "title": "{{ elem.title | xml_escape }}",
+      "url": " {{ elem.url | xml_escape }}",
+      "date": "{{ elem.date | xml_escape }}",
+      "work_category": "{{ elem.work_category | xml_escape }}",
+      "youtube_video_id": "{{ elem.youtube_video_id | xml_escape }}"
+    }
+    {% unless forloop.last >}},{% endunless >}}
+  {% endfor >}}
+  {% endraw >}}
+}

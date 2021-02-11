@@ -25,7 +25,7 @@ permalink: /works/
         <p class="contents-date"><time>{{ elem.work_category }} - {{ elem.date | date: '%Y-%m-%d' }}</time></p>
         <p class="contents-title">{{ elem.title }}</p>
         <div class="inline-center youtube box2">
-            <a class="works-button" href="https://twitter.com/{{ elem.tweet_id }}">
+            <a class="works-button" href="https://twitter.com/{{ elem.tweet_id }}" target="_blank">
                 <p class="contents-title">見る</p>
             </a>
         </div>
@@ -35,7 +35,7 @@ permalink: /works/
         <p class="contents-date"><time>{{ elem.work_category }} - {{ elem.date | date: '%Y-%m-%d' }}</time></p>
         <p class="contents-title">{{ elem.title }}</p>
         <div class="inline-center youtube box2">
-            <a class="works-button" href="{{ elem.url | relative_url }}">
+            <a class="works-button" href="{{ elem.url | relative_url }}" target="_blank">
                 <p class="contents-title">見る</p>
             </a>
         </div>

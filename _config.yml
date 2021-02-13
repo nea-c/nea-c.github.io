@@ -52,7 +52,7 @@ defaults:
       path: ""
       type: "requests"
     values:
-      layout: "page"
+      layout: "request"
       permalink: /request/:title/
 
 
